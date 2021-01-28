@@ -1,0 +1,678 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3D4AB23125C312030004F585 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4AB23025C312030004F585 /* AppDelegate.swift */; };
+		3D4AB23325C312030004F585 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4AB23225C312030004F585 /* SceneDelegate.swift */; };
+		3D4AB23825C312030004F585 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D4AB23625C312030004F585 /* Main.storyboard */; };
+		3D4AB23A25C312030004F585 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D4AB23925C312030004F585 /* Assets.xcassets */; };
+		3D4AB23D25C312030004F585 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D4AB23B25C312030004F585 /* LaunchScreen.storyboard */; };
+		3D4AB24825C312040004F585 /* MoovySearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4AB24725C312040004F585 /* MoovySearchTests.swift */; };
+		3D4AB25325C312040004F585 /* MoovySearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4AB25225C312040004F585 /* MoovySearchUITests.swift */; };
+		3D4AB26A25C312D10004F585 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4AB26925C312D10004F585 /* Movie.swift */; };
+		3D4AB27C25C3134A0004F585 /* MovieSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4AB27B25C3134A0004F585 /* MovieSearchViewModel.swift */; };
+		3D4AB28925C313A70004F585 /* movie.json in Resources */ = {isa = PBXBuildFile; fileRef = 3D4AB28825C313A70004F585 /* movie.json */; };
+		3D4AB29125C313D40004F585 /* MovieSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4AB29025C313D40004F585 /* MovieSearchTableViewCell.swift */; };
+		3D4AB29625C313F20004F585 /* MovieSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4AB29525C313F20004F585 /* MovieSearchViewController.swift */; };
+		3D4AB2BA25C321350004F585 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4AB2B925C321350004F585 /* Constants.swift */; };
+		3D4AB2BF25C3224A0004F585 /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4AB2BE25C3224A0004F585 /* WebServices.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3D4AB24425C312040004F585 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3D4AB22525C312030004F585 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D4AB22C25C312030004F585;
+			remoteInfo = MoovySearch;
+		};
+		3D4AB24F25C312040004F585 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3D4AB22525C312030004F585 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D4AB22C25C312030004F585;
+			remoteInfo = MoovySearch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3D4AB22D25C312030004F585 /* MoovySearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoovySearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D4AB23025C312030004F585 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3D4AB23225C312030004F585 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3D4AB23725C312030004F585 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3D4AB23925C312030004F585 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3D4AB23C25C312030004F585 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3D4AB23E25C312030004F585 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D4AB24325C312040004F585 /* MoovySearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoovySearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D4AB24725C312040004F585 /* MoovySearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoovySearchTests.swift; sourceTree = "<group>"; };
+		3D4AB24925C312040004F585 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D4AB24E25C312040004F585 /* MoovySearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoovySearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D4AB25225C312040004F585 /* MoovySearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoovySearchUITests.swift; sourceTree = "<group>"; };
+		3D4AB25425C312040004F585 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D4AB26925C312D10004F585 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		3D4AB27B25C3134A0004F585 /* MovieSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchViewModel.swift; sourceTree = "<group>"; };
+		3D4AB28825C313A70004F585 /* movie.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = movie.json; sourceTree = "<group>"; };
+		3D4AB29025C313D40004F585 /* MovieSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchTableViewCell.swift; sourceTree = "<group>"; };
+		3D4AB29525C313F20004F585 /* MovieSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchViewController.swift; sourceTree = "<group>"; };
+		3D4AB2B925C321350004F585 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3D4AB2BE25C3224A0004F585 /* WebServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3D4AB22A25C312030004F585 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D4AB24025C312030004F585 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D4AB24B25C312040004F585 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3D4AB22425C312030004F585 = {
+			isa = PBXGroup;
+			children = (
+				3D4AB22F25C312030004F585 /* MoovySearch */,
+				3D4AB23E25C312030004F585 /* Info.plist */,
+				3D4AB24625C312040004F585 /* MoovySearchTests */,
+				3D4AB25125C312040004F585 /* MoovySearchUITests */,
+				3D4AB22E25C312030004F585 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3D4AB22E25C312030004F585 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3D4AB22D25C312030004F585 /* MoovySearch.app */,
+				3D4AB24325C312040004F585 /* MoovySearchTests.xctest */,
+				3D4AB24E25C312040004F585 /* MoovySearchUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3D4AB22F25C312030004F585 /* MoovySearch */ = {
+			isa = PBXGroup;
+			children = (
+				3D4AB26425C3126C0004F585 /* Delegates */,
+				3D4AB28325C313510004F585 /* Controllers */,
+				3D4AB27A25C3131F0004F585 /* View Model */,
+				3D4AB26825C312B70004F585 /* Model */,
+				3D4AB28725C3138E0004F585 /* Test Data */,
+				3D4AB26325C3124F0004F585 /* Reources */,
+				3D4AB27125C312E10004F585 /* Common */,
+			);
+			path = MoovySearch;
+			sourceTree = "<group>";
+		};
+		3D4AB24625C312040004F585 /* MoovySearchTests */ = {
+			isa = PBXGroup;
+			children = (
+				3D4AB24725C312040004F585 /* MoovySearchTests.swift */,
+				3D4AB24925C312040004F585 /* Info.plist */,
+			);
+			path = MoovySearchTests;
+			sourceTree = "<group>";
+		};
+		3D4AB25125C312040004F585 /* MoovySearchUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3D4AB25225C312040004F585 /* MoovySearchUITests.swift */,
+				3D4AB25425C312040004F585 /* Info.plist */,
+			);
+			path = MoovySearchUITests;
+			sourceTree = "<group>";
+		};
+		3D4AB26325C3124F0004F585 /* Reources */ = {
+			isa = PBXGroup;
+			children = (
+				3D4AB23625C312030004F585 /* Main.storyboard */,
+				3D4AB23925C312030004F585 /* Assets.xcassets */,
+				3D4AB23B25C312030004F585 /* LaunchScreen.storyboard */,
+			);
+			path = Reources;
+			sourceTree = "<group>";
+		};
+		3D4AB26425C3126C0004F585 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				3D4AB23225C312030004F585 /* SceneDelegate.swift */,
+				3D4AB23025C312030004F585 /* AppDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		3D4AB26825C312B70004F585 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3D4AB26925C312D10004F585 /* Movie.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3D4AB27125C312E10004F585 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				3D4AB2B925C321350004F585 /* Constants.swift */,
+				3D4AB2BE25C3224A0004F585 /* WebServices.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		3D4AB27A25C3131F0004F585 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				3D4AB27B25C3134A0004F585 /* MovieSearchViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		3D4AB28325C313510004F585 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3D4AB29525C313F20004F585 /* MovieSearchViewController.swift */,
+				3D4AB29025C313D40004F585 /* MovieSearchTableViewCell.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3D4AB28725C3138E0004F585 /* Test Data */ = {
+			isa = PBXGroup;
+			children = (
+				3D4AB28825C313A70004F585 /* movie.json */,
+			);
+			path = "Test Data";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3D4AB22C25C312030004F585 /* MoovySearch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D4AB25725C312040004F585 /* Build configuration list for PBXNativeTarget "MoovySearch" */;
+			buildPhases = (
+				3D4AB22925C312030004F585 /* Sources */,
+				3D4AB22A25C312030004F585 /* Frameworks */,
+				3D4AB22B25C312030004F585 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MoovySearch;
+			productName = MoovySearch;
+			productReference = 3D4AB22D25C312030004F585 /* MoovySearch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3D4AB24225C312030004F585 /* MoovySearchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D4AB25A25C312040004F585 /* Build configuration list for PBXNativeTarget "MoovySearchTests" */;
+			buildPhases = (
+				3D4AB23F25C312030004F585 /* Sources */,
+				3D4AB24025C312030004F585 /* Frameworks */,
+				3D4AB24125C312030004F585 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3D4AB24525C312040004F585 /* PBXTargetDependency */,
+			);
+			name = MoovySearchTests;
+			productName = MoovySearchTests;
+			productReference = 3D4AB24325C312040004F585 /* MoovySearchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3D4AB24D25C312040004F585 /* MoovySearchUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D4AB25D25C312040004F585 /* Build configuration list for PBXNativeTarget "MoovySearchUITests" */;
+			buildPhases = (
+				3D4AB24A25C312040004F585 /* Sources */,
+				3D4AB24B25C312040004F585 /* Frameworks */,
+				3D4AB24C25C312040004F585 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3D4AB25025C312040004F585 /* PBXTargetDependency */,
+			);
+			name = MoovySearchUITests;
+			productName = MoovySearchUITests;
+			productReference = 3D4AB24E25C312040004F585 /* MoovySearchUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3D4AB22525C312030004F585 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					3D4AB22C25C312030004F585 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					3D4AB24225C312030004F585 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 3D4AB22C25C312030004F585;
+					};
+					3D4AB24D25C312040004F585 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 3D4AB22C25C312030004F585;
+					};
+				};
+			};
+			buildConfigurationList = 3D4AB22825C312030004F585 /* Build configuration list for PBXProject "MoovySearch" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3D4AB22425C312030004F585;
+			productRefGroup = 3D4AB22E25C312030004F585 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3D4AB22C25C312030004F585 /* MoovySearch */,
+				3D4AB24225C312030004F585 /* MoovySearchTests */,
+				3D4AB24D25C312040004F585 /* MoovySearchUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3D4AB22B25C312030004F585 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D4AB23D25C312030004F585 /* LaunchScreen.storyboard in Resources */,
+				3D4AB23A25C312030004F585 /* Assets.xcassets in Resources */,
+				3D4AB28925C313A70004F585 /* movie.json in Resources */,
+				3D4AB23825C312030004F585 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D4AB24125C312030004F585 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D4AB24C25C312040004F585 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3D4AB22925C312030004F585 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D4AB29125C313D40004F585 /* MovieSearchTableViewCell.swift in Sources */,
+				3D4AB23125C312030004F585 /* AppDelegate.swift in Sources */,
+				3D4AB23325C312030004F585 /* SceneDelegate.swift in Sources */,
+				3D4AB26A25C312D10004F585 /* Movie.swift in Sources */,
+				3D4AB2BA25C321350004F585 /* Constants.swift in Sources */,
+				3D4AB27C25C3134A0004F585 /* MovieSearchViewModel.swift in Sources */,
+				3D4AB2BF25C3224A0004F585 /* WebServices.swift in Sources */,
+				3D4AB29625C313F20004F585 /* MovieSearchViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D4AB23F25C312030004F585 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D4AB24825C312040004F585 /* MoovySearchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D4AB24A25C312040004F585 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D4AB25325C312040004F585 /* MoovySearchUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3D4AB24525C312040004F585 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3D4AB22C25C312030004F585 /* MoovySearch */;
+			targetProxy = 3D4AB24425C312040004F585 /* PBXContainerItemProxy */;
+		};
+		3D4AB25025C312040004F585 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3D4AB22C25C312030004F585 /* MoovySearch */;
+			targetProxy = 3D4AB24F25C312040004F585 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3D4AB23625C312030004F585 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D4AB23725C312030004F585 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3D4AB23B25C312030004F585 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D4AB23C25C312030004F585 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3D4AB25525C312040004F585 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3D4AB25625C312040004F585 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3D4AB25825C312040004F585 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q9VBYASDFY;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sample.MoovySearch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3D4AB25925C312040004F585 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q9VBYASDFY;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sample.MoovySearch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3D4AB25B25C312040004F585 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q9VBYASDFY;
+				INFOPLIST_FILE = MoovySearchTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sample.MoovySearchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoovySearch.app/MoovySearch";
+			};
+			name = Debug;
+		};
+		3D4AB25C25C312040004F585 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q9VBYASDFY;
+				INFOPLIST_FILE = MoovySearchTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sample.MoovySearchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoovySearch.app/MoovySearch";
+			};
+			name = Release;
+		};
+		3D4AB25E25C312040004F585 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q9VBYASDFY;
+				INFOPLIST_FILE = MoovySearchUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sample.MoovySearchUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MoovySearch;
+			};
+			name = Debug;
+		};
+		3D4AB25F25C312040004F585 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q9VBYASDFY;
+				INFOPLIST_FILE = MoovySearchUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sample.MoovySearchUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MoovySearch;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3D4AB22825C312030004F585 /* Build configuration list for PBXProject "MoovySearch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D4AB25525C312040004F585 /* Debug */,
+				3D4AB25625C312040004F585 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D4AB25725C312040004F585 /* Build configuration list for PBXNativeTarget "MoovySearch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D4AB25825C312040004F585 /* Debug */,
+				3D4AB25925C312040004F585 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D4AB25A25C312040004F585 /* Build configuration list for PBXNativeTarget "MoovySearchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D4AB25B25C312040004F585 /* Debug */,
+				3D4AB25C25C312040004F585 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D4AB25D25C312040004F585 /* Build configuration list for PBXNativeTarget "MoovySearchUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D4AB25E25C312040004F585 /* Debug */,
+				3D4AB25F25C312040004F585 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3D4AB22525C312030004F585 /* Project object */;
+}
