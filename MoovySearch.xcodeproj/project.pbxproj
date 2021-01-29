@@ -21,6 +21,7 @@
 		3D4AB29625C313F20004F585 /* MovieSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4AB29525C313F20004F585 /* MovieSearchViewController.swift */; };
 		3D4AB2BA25C321350004F585 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4AB2B925C321350004F585 /* Constants.swift */; };
 		3D4AB2BF25C3224A0004F585 /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4AB2BE25C3224A0004F585 /* WebServices.swift */; };
+		8BCAE68D25C4B820003A3A09 /* URLFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCAE68C25C4B81F003A3A09 /* URLFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		3D4AB29525C313F20004F585 /* MovieSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchViewController.swift; sourceTree = "<group>"; };
 		3D4AB2B925C321350004F585 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3D4AB2BE25C3224A0004F585 /* WebServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
+		8BCAE68C25C4B81F003A3A09 /* URLFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				3D4AB26925C312D10004F585 /* Movie.swift */,
+				8BCAE68C25C4B81F003A3A09 /* URLFormatter.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				3D4AB26A25C312D10004F585 /* Movie.swift in Sources */,
 				3D4AB2BA25C321350004F585 /* Constants.swift in Sources */,
 				3D4AB27C25C3134A0004F585 /* MovieSearchViewModel.swift in Sources */,
+				8BCAE68D25C4B820003A3A09 /* URLFormatter.swift in Sources */,
 				3D4AB2BF25C3224A0004F585 /* WebServices.swift in Sources */,
 				3D4AB29625C313F20004F585 /* MovieSearchViewController.swift in Sources */,
 			);
@@ -446,7 +450,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -501,7 +505,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -536,7 +540,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Q9VBYASDFY;
+				DEVELOPMENT_TEAM = 57UC942L9A;
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -555,9 +559,9 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Q9VBYASDFY;
+				DEVELOPMENT_TEAM = 57UC942L9A;
 				INFOPLIST_FILE = MoovySearchTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -577,9 +581,9 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Q9VBYASDFY;
+				DEVELOPMENT_TEAM = 57UC942L9A;
 				INFOPLIST_FILE = MoovySearchTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

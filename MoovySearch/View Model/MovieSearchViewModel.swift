@@ -9,10 +9,8 @@ import Foundation
 import UIKit
 
 class MovieSearchViewModel {
-    
-    var apiHandler = WebServices()
+    var apiHandler: MyNetworkingProtocol = WebServices()
     var movieList = [Movie]()
-    
     
     func getMovieFromWebService(url:String, Completion: @escaping (Bool) ->()) {
         apiHandler.getDataFromApi(apiUrl: url) { [self] (movieData,error)  in

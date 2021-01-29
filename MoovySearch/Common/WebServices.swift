@@ -7,30 +7,39 @@
 
 import Foundation
 
+protocol MyNetworkingProtocol {
+    func getDataFromApi(apiUrl:String, Completion: @escaping ([Movie], Error?) -> ())
+}
 
-class WebServices {
-    
-    func getDataFromApi(apiUrl:String, Completion: @escaping ([Movie],Error?) -> ()) {
-        do {
-            let url = URL(string: apiUrl)!
-            let urlRequest = URLRequest(url: url)
-            let task = URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
-                DispatchQueue.main.async {
-                    if let Data = data {
-                        do {
-                            let movieData = try Movie(data: Data)
-                            Completion([movieData], nil)
-                        } catch let error {
-                            Completion([], error)
-                        }
+class MockWebServices: MyNetworkingProtocol {
+    var requestShouldSucceed = true
+    func getDataFromApi(apiUrl:String, Completion: @escaping ([Movie], Error?) -> ()) {
+        if requestShouldSucceed {
+            let movie = Movie(title: "baby geniuses", imdbRating: "2.7", response: "True")
+            Completion([movie], nil)
+        } else {
+            let error = NSError(domain: "MyDomain", code: 1, userInfo: nil)
+            Completion([], error)
+        }
+    }
+}
+
+class WebServices: MyNetworkingProtocol {
+    func getDataFromApi(apiUrl:String, Completion: @escaping ([Movie], Error?) -> ()) {
+        let url = URL(string: apiUrl)!
+        let urlRequest = URLRequest(url: url)
+        let task = URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
+            DispatchQueue.main.async {
+                if let Data = data {
+                    do {
+                        let movieData = try Movie(data: Data)
+                        Completion([movieData], nil)
+                    } catch let error {
+                        Completion([], error)
                     }
                 }
             }
-            task.resume()
-        } catch let error {
-            print(error.localizedDescription)
-            Completion([], error)
         }
-        
+        task.resume()
     }
 }
