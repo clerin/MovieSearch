@@ -8,7 +8,10 @@
 import Foundation
 
 class URLFormatter {
-    static func omdbURL(for _: String) -> URL? {
-        return nil
+    static func omdbURL(forSearchTerm : String) -> URL? {
+        let encodedSearchString = forSearchTerm.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
+        NSLog("RequestURL:\(getURL.firstURL.rawValue+encodedSearchString)")
+        let url = URL(string: (getURL.firstURL.rawValue + encodedSearchString))!
+        return url
     }
 }

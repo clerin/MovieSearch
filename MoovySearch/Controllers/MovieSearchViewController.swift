@@ -25,18 +25,18 @@ class MovieSearchViewController: UIViewController,UITableViewDataSource,UITableV
         if enteredName == nil {
             enteredName = "Enter movie name"
         } else {
-            movieViewModel.getMovieFromWebService(url: getURL.firstURL.rawValue + enteredName! + getURL.secondURL.rawValue) { (success) in
-                DispatchQueue.main.async { [weak self] in
-                    if !success {
-                        let alert = UIAlertController(title: "OOps", message: "invalid movie name", preferredStyle: .alert)
-                        let action = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-                        alert.addAction(action)
-                        self?.present(alert, animated: true, completion: nil)
-                    } else {
-                        self?.movieTableview.reloadData()
+                movieViewModel.getMovieFromWebService(searchTerm: enteredName! + getURL.secondURL.rawValue) { (success) in
+                    DispatchQueue.main.async { [weak self] in
+                        if !success {
+                            let alert = UIAlertController(title: "Sorry!", message: "Movie not found", preferredStyle: .alert)
+                            let action = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+                            alert.addAction(action)
+                            self?.present(alert, animated: true, completion: nil)
+                        } else {
+                            self?.movieTableview.reloadData()
+                        }
                     }
                 }
-            }
         }
     }
     
@@ -50,7 +50,7 @@ class MovieSearchViewController: UIViewController,UITableViewDataSource,UITableV
         let cell = movieTableview.dequeueReusableCell(withIdentifier: "cell") as! MovieSearchTableViewCell
         cell.movieLabel.text = movieViewModel.getMovietitle(index: indexPath.row)
         cell.movieImageView.load(url: movieViewModel.getMovieImage(index: indexPath.row))
-        cell.starImageView.image = movieViewModel.getImdbRating(index: indexPath.row)
+        cell.starImageView.image = UIImage(named: movieViewModel.getImdbRatingImageName(index: indexPath.row))
         return cell
     }
     

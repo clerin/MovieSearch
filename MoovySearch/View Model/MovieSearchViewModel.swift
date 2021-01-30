@@ -12,8 +12,8 @@ class MovieSearchViewModel {
     var apiHandler: MyNetworkingProtocol = WebServices()
     var movieList = [Movie]()
     
-    func getMovieFromWebService(url:String, Completion: @escaping (Bool) ->()) {
-        apiHandler.getDataFromApi(apiUrl: url) { [self] (movieData,error)  in
+    func getMovieFromWebService(searchTerm:String, Completion: @escaping (Bool) ->()) {
+        apiHandler.getDataFromApi(searchTerm: searchTerm) { [self] (movieData,error)  in
             if(error == nil) {
                 if movieData.first?.response == "True" {
                     self.movieList = movieData
@@ -49,36 +49,34 @@ class MovieSearchViewModel {
         return imageURL!
     }
     
-    func getImdbRating(index: Int) -> UIImage {
+    func getImdbRatingImageName(index: Int) -> String {
+        var rating = 0
         let ratingData = getMovieIndex(index: index)
-        let imdbRating = ratingData.imdbRating
-       // var rate = Int(imdbRating)/10 * 5
-        let rate = 4
-        var rateImage: UIImage?
-        switch rate {
+        if let imdbRating = ratingData.imdbRating {
+            NSLog("imdbRating:\(ratingData.imdbRating ?? "")")
+            let ratingInNumber = Double(imdbRating) ?? 0
+            rating = Int(ratingInNumber/10.0 * 5)
+            NSLog("rating:\(rating)")
+
+        }
+        switch rating {
         case 0:
-            rateImage = UIImage(named: "0")
-            return rateImage!
+            return "0"
         case 1:
-            rateImage = UIImage(named: "1")
-            return rateImage!
+            return "1"
         case 2:
-            rateImage = UIImage(named: "2")
-            return rateImage!
+            return "2"
         case 3:
-            rateImage = UIImage(named: "3")
-            return rateImage!
+            return "3"
         case 4:
-            rateImage = UIImage(named: "4")
-            return rateImage!
+            return "4"
         case 5:
-            rateImage = UIImage(named: "5")
-            return rateImage!
+            return "5"
         default:
             print("no image")
             break
         }
-        return rateImage!
+        return "0"
     }
 
 }
