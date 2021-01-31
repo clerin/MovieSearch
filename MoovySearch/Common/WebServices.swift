@@ -8,24 +8,24 @@
 import Foundation
 
 protocol MyNetworkingProtocol {
-    func getDataFromApi(searchTerm:String, Completion: @escaping ([Movie], Error?) -> ())
+    func getDataFromApi(searchTerm:String, completion: @escaping ([Movie], Error?) -> ())
 }
 
 class MockWebServices: MyNetworkingProtocol {
     var requestShouldSucceed = true
-    func getDataFromApi(searchTerm apiUrl:String, Completion: @escaping ([Movie], Error?) -> ()) {
+    func getDataFromApi(searchTerm apiUrl:String, completion: @escaping ([Movie], Error?) -> ()) {
         if requestShouldSucceed {
             let movie = Movie(title: "baby geniuses", imdbRating: "2.7", response: "True")
-            Completion([movie], nil)
+            completion([movie], nil)
         } else {
             let error = NSError(domain: "MyDomain", code: 1, userInfo: nil)
-            Completion([], error)
+            completion([], error)
         }
     }
 }
 
 class WebServices: MyNetworkingProtocol {
-    func getDataFromApi(searchTerm:String, Completion: @escaping ([Movie], Error?) -> ()) {
+    func getDataFromApi(searchTerm:String, completion: @escaping ([Movie], Error?) -> ()) {
         if let url = URLFormatter.omdbURL(forSearchTerm: searchTerm) {
             let urlRequest = URLRequest(url: url)
             let task = URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
@@ -33,9 +33,9 @@ class WebServices: MyNetworkingProtocol {
                     if let Data = data {
                         do {
                             let movieData = try Movie(data: Data)
-                            Completion([movieData], nil)
+                            completion([movieData], nil)
                         } catch let error {
-                            Completion([], error)
+                            completion([], error)
                         }
                     }
                 }

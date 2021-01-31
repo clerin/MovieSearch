@@ -126,7 +126,7 @@
 				3D4AB27A25C3131F0004F585 /* View Model */,
 				3D4AB26825C312B70004F585 /* Model */,
 				3D4AB28725C3138E0004F585 /* Test Data */,
-				3D4AB26325C3124F0004F585 /* Reources */,
+				3D4AB26325C3124F0004F585 /* Resources */,
 				3D4AB27125C312E10004F585 /* Common */,
 			);
 			path = MoovySearch;
@@ -150,14 +150,14 @@
 			path = MoovySearchUITests;
 			sourceTree = "<group>";
 		};
-		3D4AB26325C3124F0004F585 /* Reources */ = {
+		3D4AB26325C3124F0004F585 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				3D4AB23625C312030004F585 /* Main.storyboard */,
 				3D4AB23925C312030004F585 /* Assets.xcassets */,
 				3D4AB23B25C312030004F585 /* LaunchScreen.storyboard */,
 			);
-			path = Reources;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		3D4AB26425C3126C0004F585 /* Delegates */ = {

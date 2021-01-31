@@ -12,17 +12,17 @@ class MovieSearchViewModel {
     var apiHandler: MyNetworkingProtocol = WebServices()
     var movieList = [Movie]()
     
-    func getMovieFromWebService(searchTerm:String, Completion: @escaping (Bool) ->()) {
+    func getMovieFromWebService(searchTerm:String, completion: @escaping (Bool) ->()) {
         apiHandler.getDataFromApi(searchTerm: searchTerm) { [self] (movieData,error)  in
             if(error == nil) {
                 if movieData.first?.response == "True" {
                     self.movieList = movieData
-                    Completion(true)
+                    completion(true)
                 } else {
-                    Completion(false)
+                    completion(false)
                 }
-              } else {
-                Completion(false)
+            } else {
+                completion(false)
             }
         }
     }
@@ -53,11 +53,8 @@ class MovieSearchViewModel {
         var rating = 0
         let ratingData = getMovieIndex(index: index)
         if let imdbRating = ratingData.imdbRating {
-            NSLog("imdbRating:\(ratingData.imdbRating ?? "")")
             let ratingInNumber = Double(imdbRating) ?? 0
             rating = Int(ratingInNumber/10.0 * 5)
-            NSLog("rating:\(rating)")
-
         }
         switch rating {
         case 0:
@@ -78,5 +75,4 @@ class MovieSearchViewModel {
         }
         return "0"
     }
-
 }

@@ -17,7 +17,6 @@ class MovieSearchViewController: UIViewController,UITableViewDataSource,UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         movieSearchBar.delegate = self
-        
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -25,22 +24,20 @@ class MovieSearchViewController: UIViewController,UITableViewDataSource,UITableV
         if enteredName == nil {
             enteredName = "Enter movie name"
         } else {
-                movieViewModel.getMovieFromWebService(searchTerm: enteredName! + getURL.secondURL.rawValue) { (success) in
-                    DispatchQueue.main.async { [weak self] in
-                        if !success {
-                            let alert = UIAlertController(title: "Sorry!", message: "Movie not found", preferredStyle: .alert)
-                            let action = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
-                            alert.addAction(action)
-                            self?.present(alert, animated: true, completion: nil)
-                        } else {
-                            self?.movieTableview.reloadData()
-                        }
+            movieViewModel.getMovieFromWebService(searchTerm: enteredName! + getURL.secondURL.rawValue) { (success) in
+                DispatchQueue.main.async { [weak self] in
+                    if !success {
+                        let alert = UIAlertController(title: "Sorry!", message: "Movie not found", preferredStyle: .alert)
+                        let action = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+                        alert.addAction(action)
+                        self?.present(alert, animated: true, completion: nil)
+                    } else {
+                        self?.movieTableview.reloadData()
                     }
                 }
+            }
         }
     }
-    
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return movieViewModel.getNumberOfRows()
@@ -53,5 +50,4 @@ class MovieSearchViewController: UIViewController,UITableViewDataSource,UITableV
         cell.starImageView.image = UIImage(named: movieViewModel.getImdbRatingImageName(index: indexPath.row))
         return cell
     }
-    
 }
